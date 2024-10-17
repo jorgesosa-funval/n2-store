@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
     images: {
         remotePatterns: [
             {
@@ -8,8 +9,13 @@ const nextConfig = {
                 port: '',
                 search: '',
             },
+            {
+                protocol: 'https',
+                hostname: 'fakestoreapi.com',
+            },
         ],
     },
+
 };
 
 export default nextConfig;
