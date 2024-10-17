@@ -7,14 +7,14 @@ import React from "react";
   Contenido centrado
 </div> */
 }
-const HeroItems = ({ item, className }) => {
+const HeroItems = ({ item, className, title = "", image = "", price = 0 }) => {
   return (
     <div className={`relative group ${className}`}>
       <div className="rounded-t-full bg-white p-12 overflow-hiddenx shadow-lg group-hover:blur-sm h-full">
         <div className="">
           <Image
-            src={item.image}
-            alt={item.title}
+            src={image}
+            alt={title}
             width={300}
             height={300}
             className="w-full relative"
@@ -23,8 +23,8 @@ const HeroItems = ({ item, className }) => {
       </div>
       <div className="absolute bottom-4  bg-transparent w-full h-full opacity-50x content-center">
         <div className="w-3/4 mx-auto flex flex-col items-center justify-center text-xs bg-slate-200 shadow-xl rounded-xl p-2 ">
-          <h3 className="font-bold ">{item.title.slice(0, 10)}</h3>
-          <p className="text-sm font-semibold">$ {item.price}</p>
+          <h3 className="font-bold ">{title.slice(0, 10)}</h3>
+          <p className="text-sm font-semibold">$ {price}</p>
         </div>
       </div>
     </div>
@@ -87,7 +87,14 @@ const HeroSection = ({ collection, className }) => {
                   break;
               }
               return (
-                <HeroItems key={item.id} item={item} className={className} />
+                <HeroItems
+                  key={item.id}
+                  item={item}
+                  className={className}
+                  title={item.title}
+                  image={item.image}
+                  price={item.price}
+                />
               );
             })}
           </div>
