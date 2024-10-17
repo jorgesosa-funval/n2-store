@@ -33,14 +33,6 @@ const {data : categories} = await axios.get('https://fakestoreapi.com/products/c
   )
 }
 
-/*users &&  users.map(user =>
-    
-    
-    {handlelogout}*/
-
-    
-      
-
 
 
 
