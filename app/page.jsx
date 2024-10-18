@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from '@/components/HeroSection'
 import NavBarNoUser1 from '@/components/NavBar/NavBarNoUser1'
 import CardCarousel from '@/components/CardCarousel'
+import NavBarUser from '@/components/NavBar/NavBarUser'
 export default function Home() {
 
   const collection = [
@@ -126,6 +127,7 @@ export default function Home() {
       }
     },
   ]
+  let registrado=false
   return (
     <>
       {/* <div>
@@ -138,7 +140,8 @@ export default function Home() {
 
         </div>
       </div> */}
-      <NavBarNoUser1></NavBarNoUser1>
+      {registrado ?  <NavBarUser/>:<NavBarNoUser1/>}
+      
       <HeroSection collection={collection} className={"bg-slate-100"}></HeroSection>
       <CardCarousel></CardCarousel>
     </>

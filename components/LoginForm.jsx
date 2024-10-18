@@ -24,7 +24,7 @@ export default function LoginForm() {
                 const data = await response.json();
                 console.log('Login successful:', data);
                 // Redirecionar para a página principal ou dashboard
-                router.push('/dashboard');
+                router.push('/');
             } else {
                 // Login falhou
                 const errorData = await response.json();
