@@ -1,11 +1,10 @@
 import axios from "axios";
-
-const URL = "https://fakestoreapi.com/";
+import { URL_API } from ".";
 
 export const getUserCarts = async (userId) => {
   try {
-    const data = await axios.get(`${URL}carts/user/${userId}`);
-    console.log('recivinedo', data.data)
+    const data = await axios.get(`${URL_API}carts/user/${userId}`);
+    console.log("recivinedo", data.data);
     return data.data;
   } catch (error) {
     return [];
@@ -13,8 +12,8 @@ export const getUserCarts = async (userId) => {
 };
 export const getCart = async (cartId) => {
   try {
-    const data = await axios.get(`${URL}carts/${cartId}`);
-    console.log('recivinedo', data.data)
+    const data = await axios.get(`${URL_API}carts/${cartId}`);
+    console.log("recivinedo", data.data);
     return data.data;
   } catch (error) {
     return [];
@@ -29,7 +28,7 @@ export const getCart = async (cartId) => {
  */
 export const addProductsToCart = async (userId, products, date) => {
   try {
-    const data = await axios.post(`${URL}carts`, {
+    const data = await axios.post(`${URL_API}carts`, {
       userId,
       date,
       products,
@@ -44,7 +43,7 @@ export const addProductsToCart = async (userId, products, date) => {
 export const removeProductFromCart = async (userId, productId) => {
   try {
     const data = await axios.delete(
-      `${URL}carts/user/${userId}/product/${productId}`
+      `${URL_API}carts/user/${userId}/product/${productId}`
     );
     return data.data;
   } catch (error) {

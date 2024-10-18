@@ -44,7 +44,6 @@ export const deleteItemCart = (cartId, productId) => {
 
 export const addProductToCart = (cartId, productId, quantity) => {
   const _data = getQueryClient().getQueryData([NAME_KEY, cartId]);
-  console.log("data collection", _data);
   const product = _data.products.find((item) => item.productId === productId);
 
   if (product) {
