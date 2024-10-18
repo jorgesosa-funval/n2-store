@@ -11,80 +11,18 @@ export default function Product() {
                         <div className="flex flex-col justify-between p-5 leading-normal gap-4">
                             <div>
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-slate-900">Name of the product</h5>
-                                <p className="mb-3 font-semibold text-slate-900 text-sm">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                <p className="mb-3 font-semibold text-slate-900 text-lg">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                                 <hr className='border border-gray-300'></hr>
                             </div>
-                            <div className='COLORS'>
+                            <div className='CATEGORY'>
                                 <label className='flex flex-col gap-2'>
-                                    <h6 className='font-semibold'>Available Colors</h6>
-                                    <div className=''>
-                                        <div className='flex'>
-                                            <button className='flex flex-col items-center p-1 border bg-gray-100 border-gray-300 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                                <h6 className='text-xs font-bold'>Green</h6>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="green" className="size-5">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg>
-                                            </button>
-                                            <button className='flex flex-col items-center p-1 border border-gray-300 bg-gray-100 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                                <h6 className='text-xs font-bold'>Blue</h6>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="blue" className="size-5">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg>
-                                            </button>
-                                            <button className='flex flex-col items-center p-1 border border-gray-300 bg-gray-100 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                                <h6 className='text-xs font-bold'>Purple</h6>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="purple" className="size-5">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg>
-                                            </button>
-                                            <button className='flex flex-col items-center p-1 border bg-gray-100 border-gray-300 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                                <h6 className='text-xs font-bold'>Red</h6>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="red" className="size-5">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg>
-                                            </button>
-                                            <button className='flex flex-col items-center p-1 border border-gray-300 bg-gray-100 focus:border-blue-500 focus:border-2 hover:bg-gray-300'>
-                                                <h6 className='text-xs font-bold'>Orange</h6>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="orange" className="size-5">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg>
-                                            </button>
-                                        </div>
-
-
-                                    </div>
-                                </label>
-                            </div>
-                            <div className='SIZE'>
-                                <label className='flex flex-col gap-2'>
-                                    <div className='flex gap-1 items-center'>
-                                        <h6 className='font-semibold text-lg'>Size </h6>
-                                        <p>Please select one</p>
-                                    </div>
-                                    <div className=''>
-                                        <button className='items-center p-1 border bg-gray-100 border-gray-300 text-gray-950 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                            <h6 className='font-bold'>S</h6>
-                                            <p className='text-sm font-bold'>Small</p>
-                                        </button>
-                                        <button className='items-center p-1 border bg-gray-100 border-gray-300 text-gray-950 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                            <h6 className='font-bold'>M</h6>
-                                            <p className='text-sm font-bold'>Medium</p>
-                                        </button>
-                                        <button className='items-center p-1 border bg-gray-100 border-gray-300 text-gray-950 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                            <h6 className='font-bold'>L</h6>
-                                            <p className='text-sm font-bold'>Large</p>
-                                        </button>
-                                        <button className='items-center p-1 border bg-gray-100 border-gray-300 text-gray-950 focus:border-blue-500 cursor-pointer focus:border-2 hover:bg-gray-300'>
-                                            <h6 className='font-bold'>XL</h6>
-                                            <p className='text-sm font-bold'>XLarge</p>
-                                        </button>
-                                    </div>
+                                    <h6 className='font-medium text-lg'>Category</h6>
+                                    <p>Name of category</p>
                                 </label>
                             </div>
                             <div className='PRICE'>
-                                <div className='bg-gray-500 py-1 px-2 text-white rounded-md'>
+                                <div className='bg-gray-500 py-3 px-2 text-white rounded-md text-lg'>
                                     <h5>$ 80.00</h5>
-                                    <p className='text-sm'>Ex Tax: $80.00</p>
                                 </div>
                             </div>
                             <div className='ICONS'>
