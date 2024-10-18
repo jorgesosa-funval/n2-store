@@ -6,12 +6,12 @@ export default function RegisterPage() {
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
                 <h1 className="text-3xl font-bold text-sky-800 mb-6 text-center">Registro</h1>
                 <p className="text-center text-slate-600">
-                    Formulário de registro será implementado aqui.
+                    Please fill in the form below to create an account.
                 </p>
                 <p className="mt-4 text-center text-sm text-slate-600">
-                    Já tem uma conta?{' '}
+                    Did you have an account?{' '}
                     <a href="/auth/login" className="text-sky-600 hover:text-sky-800">
-                        Faça login
+                        Login
                     </a>
                 </p>
             </div>
