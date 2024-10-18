@@ -1,19 +1,27 @@
 import React from 'react'
 import Product from './Product'
 import Link from 'next/link';
-const products = new Array(15).fill(null);
-export default function ListaProducto() {
+import axios from 'axios';
+
+
+export default async function ListaProducto() {
+    const {data}=await axios.get('https://fakestoreapi.com/products')
+
   return (
     <div>
             <div className='p-10 h-full grid grid-cols-4 gap-5'>
-                {products.slice(0, 12).map((_, index) => (
-                    <Link href='/productDetails'><Product key={index} 
-                    image='https://picsum.photos/200/300?random=1'
-                    title='title'
-                    price='precio'
-                    description='descripcion'
+                {data.slice(0, 12).map((product, index) => (
+                    <Link href='/productDetails'>
+                    
+                    <Product key={index} 
+                    image= {product.image}
+                    title={product.title}
+                    price={product.price}
+                    description={product.description}
+                    category={product.category}
                     rate='5'
                     />
+                    
                     </Link>
                 ))}
             </div>
