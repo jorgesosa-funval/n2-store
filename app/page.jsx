@@ -1,5 +1,3 @@
-import Register from './auth/register/page'
-
 import React from 'react'
 
 
@@ -8,7 +6,6 @@ export default function Home() {
     <>
       <div>
 
-        <Register />
         <div className='size-44 bg-sky-500'>
 
         </div>
