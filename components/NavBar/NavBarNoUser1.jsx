@@ -32,10 +32,10 @@ export default function NavBarNoUser1() {
             </figure>
         </li>
         </Link>
-        <Link href="/login">
+        <Link href="/auth/login">
         <li className='text-lg font-medium text-white'>Log in</li>
         </Link>
-        <Link href="/register">
+        <Link href="/auth/register">
         <li className=''>
             <button className='bg-slate-800 text-xl p-2 text-white font-medium rounded-lg hover:bg-slate-600  focus:bg-sky-600'>
             Registrarse
