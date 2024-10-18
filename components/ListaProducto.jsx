@@ -10,20 +10,22 @@ export default async function ListaProducto() {
   return (
     <div>
             <div className='p-10 h-full grid grid-cols-4 gap-5'>
-                {data.slice(0, 12).map((product, index) => (
-                    <Link href='/productDetails'>
+                {
+                data && data.slice(0, 12).map((item, index) => (
                     
+                    <Link href='/productDetails'>
                     <Product key={index} 
-                    image= {product.image}
-                    title={product.title}
-                    price={product.price}
-                    description={product.description}
-                    category={product.category}
+                    image= {item.image}
+                    title={item.title}
+                    price={item.price}
+                    description={item.description}
+                    category={item.category}
                     rate='5'
                     />
                     
                     </Link>
-                ))}
+                ))
+                }
             </div>
             <div className='justify-center flex p-5 hover:shadow-gray-500-lg '>
             <button className='flex text-slate-600'>
