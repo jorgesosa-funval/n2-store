@@ -23,9 +23,9 @@ const {data : categories} = await axios.get('https://fakestoreapi.com/products/c
                 <input type="text" className="rounded-xl h-8 w-[55%] text-sm md:w-[70%] ml-8 border-1 shadow-lg hover:border-cyan-400" placeholder='  Search product by name'/>
                 <div className="w-0 md:w-64"></div>
                 <select name="categories" className="shadow-lg text-sm justify-end md:ml-28 ml-2 h-8 text-slate-600 rounded-md w-[20%] md:w-[30%] mr-10 md:mr-2">
-                <option value="Todas">Todas</option>
-                            {  categories &&  categories.map(cat =>
-                                <option value={cat}>{cat}</option>
+                   <option value="Todas">Todas</option>
+                            {  categories &&  categories.map((cat,i) =>
+                                <option key={i} value={cat}>{cat}</option>
                             )}
                 </select>
             </form>
